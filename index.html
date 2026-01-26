@@ -339,6 +339,62 @@
             flex-wrap: wrap;
         }
 
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .education-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .education-school {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-degree {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-date {
+            background: var(--bg-light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--gray);
+            white-space: nowrap;
+        }
+
+        .education-details {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
         /* About Section */
         .about-grid {
             display: grid;
@@ -679,6 +735,12 @@
                 align-items: flex-start;
                 gap: 0.5rem;
             }
+
+            .education-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -690,6 +752,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#resume">Resume</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -763,7 +826,7 @@
                     </p>
                     <div class="resume-highlights">
                         <p><strong>✓</strong> Product Enablement Engineer at Paradigm Senior Services</p>
-                        <p><strong>✓</strong> MS Management Science - UT Dallas</p>
+                        <p><strong>✓</strong> MS in Ethical AI and Strategic Decision Sciences (In Progress)</p>
                         <p><strong>✓</strong> $320K+ Revenue Impact Generated</p>
                         <p><strong>✓</strong> Expert in Python, SQL, Tableau, Streamlit</p>
                     </div>
@@ -772,6 +835,61 @@
                 <div class="download-buttons">
                     <button onclick="downloadResume()" class="btn btn-primary">📥 Download Resume</button>
                     <a href="#experience" class="btn btn-secondary">👁️ View Experience</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Academic Background</div>
+                <h2 class="section-title">Education</h2>
+                <p class="section-description">
+                    Continuous learning in AI, product management, and data analytics
+                </p>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <div>
+                            <h3 class="education-school">Dallas Baptist University</h3>
+                            <p class="education-degree">MS in Ethical AI and Strategic Decision Sciences</p>
+                        </div>
+                        <div class="education-date">Dec 2027</div>
+                    </div>
+                    <p class="education-details">
+                        Advanced studies in ethical AI frameworks and strategic decision-making to drive responsible innovation and data-driven leadership.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <div>
+                            <h3 class="education-school">The University of Texas at Dallas</h3>
+                            <p class="education-degree">MS in Management Science</p>
+                            <p class="education-details" style="margin: 0; font-size: 0.9rem;">Product Management + Business Analytics</p>
+                        </div>
+                        <div class="education-date">May 2024</div>
+                    </div>
+                    <p class="education-details">
+                        Specialized in product management methodologies, data-driven decision making, and business analytics to drive organizational growth.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <div>
+                            <h3 class="education-school">Amity University Rajasthan</h3>
+                            <p class="education-degree">Bachelor of Technology in Computer Science</p>
+                        </div>
+                        <div class="education-date">Jun 2022</div>
+                    </div>
+                    <p class="education-details">
+                        Strong foundation in computer science fundamentals, programming, and software development principles.
+                    </p>
                 </div>
             </div>
         </div>
@@ -796,9 +914,10 @@
                         significant operational efficiency.
                     </p>
                     <p>
-                        With a Master's in Management Science from UT Dallas and a background in Computer Science, I bring a 
-                        unique blend of technical expertise and business acumen to product development. My experience spans 
-                        across product analytics, data visualization, and cross-functional team leadership.
+                        With a Master's in Management Science from UT Dallas and currently pursuing an MS in Ethical AI and Strategic 
+                        Decision Sciences at Dallas Baptist University, I bring a unique blend of technical expertise and business 
+                        acumen to product development. My experience spans across product analytics, data visualization, and 
+                        cross-functional team leadership.
                     </p>
                     <p>
                         Whether it's reducing processing time from hours to minutes or identifying market opportunities, I thrive 
@@ -816,8 +935,8 @@
                         <span class="metric-label">Revenue Impact Generated</span>
                     </div>
                     <div class="metric-card">
-                        <span class="metric-number">53%</span>
-                        <span class="metric-label">Runtime Improvement</span>
+                        <span class="metric-number">90%</span>
+                        <span class="metric-label">Processing Time Reduction</span>
                     </div>
                     <div class="metric-card">
                         <span class="metric-number">10M+</span>
@@ -843,19 +962,19 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">Product Enablement Engineer</h3>
+                            <h3 class="experience-title">Product Enablement Engineer (Data Strategist)</h3>
                             <p class="experience-company">Paradigm Senior Services</p>
                         </div>
-                        <div class="experience-date">Dec 2024 - Present</div>
+                        <div class="experience-date">Dec 2024 - Oct 2025</div>
                     </div>
                     <p class="experience-description">
                         Leading product enablement initiatives that have saved 15,000+ hours annually and generated ~$320K in revenue impact.
                     </p>
                     <ul class="experience-achievements">
-                        <li>Built internal web tools using Python, SQL, and Streamlit, reducing manual processing time by up to 98%</li>
-                        <li>Optimized SQL queries and improved time-complexity, cutting runtime by 53%</li>
-                        <li>Collaborated with cross-functional teams to identify 20+ bottlenecks and process gaps</li>
-                        <li>Developed client-facing VA Timesheet Generator, reducing client costs by ~$300/month</li>
+                        <li>Engineered data-driven product roadmaps by analyzing HubSpot CRM pipeline data to identify 20+ operational bottlenecks, translating insights into Figma wireframes and automated HubSpot reporting</li>
+                        <li>Architected and deployed high-performance internal web tools using Python, SQL, and Streamlit to automate core financial workflows, resulting in a 90% reduction in manual processing time and 15,000+ hours saved annually (~$320K in revenue)</li>
+                        <li>Optimized product performance by refactoring SQL queries and improving Python time-complexity, cutting application runtime by 53% and ensuring system scalability for 150+ providers</li>
+                        <li>Collaborated with stakeholders to own the end-to-end development and launch of a client-facing VA Timesheet Generator with Python; automated PDF reporting, and reduced client operational costs by ~$300/month</li>
                     </ul>
                 </div>
 
@@ -871,10 +990,9 @@
                         Defined product requirements and automated ETL workflows, generating dashboards that forecasted market opportunities.
                     </p>
                     <ul class="experience-achievements">
-                        <li>Generated dashboards that forecasted a 7% market share opportunity in solar battery charger market</li>
-                        <li>Analyzed SQL datasets to identify 4 high-potential provinces for market entry strategy</li>
-                        <li>Coordinated 9-member cross-functional team, improving project delivery timelines by 20%</li>
-                        <li>Ensured stakeholder adoption of data-driven recommendations for product rollout</li>
+                        <li>Coordinated a 9-member cross-functional team across engineering, research, and strategy, improving project delivery timelines by 20% and ensuring stakeholder adoption of recommendations</li>
+                        <li>Defined product requirements with stakeholders and built ETL workflows in Python/SQL, generating dashboards that forecasted a 7% market share opportunity in the solar battery charger market</li>
+                        <li>Analyzed SQL datasets to inform go-to-market strategy, identifying 4 high-potential provinces for market entry and directly shaping product rollout recommendations</li>
                     </ul>
                 </div>
 
@@ -890,10 +1008,9 @@
                         Processed massive datasets and developed strategic insights for ATM placement optimization.
                     </p>
                     <ul class="experience-achievements">
-                        <li>Processed 10M+ rows of US census data using Power Query for demographic analysis</li>
-                        <li>Developed Tableau dashboards analyzing ATM usage patterns across 330M+ US residents</li>
-                        <li>Influenced ATM placement strategy supporting 100+ new deployments</li>
-                        <li>Improved market coverage in 5 regions through transaction-per-capita insights</li>
+                        <li>Processed 10M+ rows of raw US census data with Power Query to collect data for demographic and geographic analysis</li>
+                        <li>Enabled product positioning decisions by developing Tableau dashboards and Excel models using company KPIs and metrics, analyzing ATM usage patterns across 330M+ US residents, enabling more precise profiling for product strategy</li>
+                        <li>Influenced ATM placement strategy by presenting transaction-per-capita insights to stakeholders, directly guiding optimal network expansion; recommendations supported 100+ new ATM deployments and improved market coverage in 5 regions</li>
                     </ul>
                 </div>
             </div>
@@ -913,15 +1030,15 @@
             
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming & Databases</h3>
+                    <h3>Core Engineering</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">R</span>
                         <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Microsoft SQL Server</span>
+                        <span class="skill-tag">Microsoft SQL Server (MSSQL)</span>
                         <span class="skill-tag">MySQL</span>
                         <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PyODBC</span>
+                        <span class="skill-tag">GitHub</span>
                     </div>
                 </div>
 
@@ -932,17 +1049,29 @@
                         <span class="skill-tag">Power BI</span>
                         <span class="skill-tag">Power Query</span>
                         <span class="skill-tag">Advanced Excel</span>
-                        <span class="skill-tag">Google Analytics</span>
+                        <span class="skill-tag">Google Analytics (GA4)</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Cloud & Development</h3>
+                    <h3>Cloud & Development Frameworks</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Streamlit</span>
-                        <span class="skill-tag">Amazon Web Services</span>
+                        <span class="skill-tag">Amazon Web Services (AWS)</span>
                         <span class="skill-tag">Microsoft Azure</span>
-                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Product & Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Customer Journey Mapping</span>
+                        <span class="skill-tag">Product Development Lifecycle</span>
+                        <span class="skill-tag">Product Discovery</span>
+                        <span class="skill-tag">Agile Methodologies</span>
+                        <span class="skill-tag">A/B Testing</span>
+                        <span class="skill-tag">Feature Prioritization</span>
+                        <span class="skill-tag">Stakeholder Management</span>
                     </div>
                 </div>
 
@@ -1025,7 +1154,7 @@
                         <h3 class="project-title">Internal Automation Tools</h3>
                         <p class="project-description">
                             Built Account Review and Email Automation tools using Python, SQL, and Streamlit. Reduced manual 
-                            processing time from 8 hours to 15 minutes, achieving 98% efficiency improvement and saving $320K annually.
+                            processing time from 8 hours to 15 minutes, achieving 90% efficiency improvement and saving $320K annually.
                         </p>
                         <div class="project-links">
                             <a href="https://github.com/mitaalidayal" class="project-link" target="_blank">GitHub →</a>
@@ -1070,8 +1199,8 @@
 
                     <div class="contact-item">
                         <div class="contact-icon">🎓</div>
-                        <h3 class="contact-title">Education</h3>
-                        <p class="contact-text">MS Management Science - UT Dallas</p>
+                        <h3 class="contact-title">Current Studies</h3>
+                        <p class="contact-text">MS Ethical AI - Dallas Baptist University</p>
                     </div>
                 </div>
 
@@ -1128,38 +1257,36 @@ Contact Information:
 Phone: (469) 879-6176
 Email: dayalmitaali25@gmail.com
 LinkedIn: https://www.linkedin.com/in/mitaalidayal/
+Portfolio: [Your Portfolio Link]
 GitHub: https://github.com/mitaalidayal
 Tableau: https://public.tableau.com/app/profile/mitaali.dayal1517/vizzes
 Location: Miami, Florida
 
-TECHNICAL SKILLS
+EDUCATION
 
-Programming and Databases:
-• Python (PyODBC, Cursor), R, SQL, Microsoft SQL Server (MSSQL), MySQL, Mongo DB
+Dallas Baptist University
+MS in Ethical AI and Strategic Decision Sciences | Dec 2027
 
-Data Analytics and Visualization:
-• Tableau, Power BI, Power Query, Advanced Excel, Google Analytics (GA4)
+The University of Texas at Dallas
+MS in Management Science - Product Management + Business Analytics | May 2024
 
-Cloud and Development Frameworks:
-• Streamlit, Amazon Web Services (AWS), Microsoft Azure
-
-Collaboration and Workflow:
-• Microsoft Office, Figma, Jira, Linear, Trello, Confluence, Notion, HubSpot CRM, GitHub
+Amity University Rajasthan, India
+Bachelor of Technology in Computer Science | Jun 2022
 
 EXPERIENCE
 
 Paradigm Senior Services | Miami, FL
-Product Enablement Engineer (Data Strategist) | Dec 2024 - Present
-• Partnered with Billing team stakeholders to identify issues in manual invoice processing and automated workflows by delivering internal web tools (Account Review, Email Automation) using Python, SQL, and Streamlit; reduced processing time from 8h→15m and 40m→7m, driving full adoption and saving 15,000+ hours/year (~$320K in revenue).
-• Incorporated user feedback to address runtime issues in the Account Review tool by optimizing SQL queries and improving time-complexity issues in Python, cutting runtime by 53% (15→7m) and enabling account reviews for 150+ providers.
-• Collaborated with Account Managers and followed provider requirements to build and launch a client-facing VA Timesheet Generator with Python; automated PDF reporting, and reduced client costs by ~$300/month.
-• Analyzed HubSpot CRM pipeline data for Customer Success, Implementations, Account Management, Posting, and Billing teams to build workflows in Figma and HubSpot BI reports; identified 20+ bottlenecks and process gaps, then recommended improvements that streamlined cross-department collaboration and shaped roadmap priorities.
+Product Enablement Engineer (Data Strategist) | Dec 2024 - Oct 2025
+• Engineered data-driven product roadmaps by analyzing HubSpot CRM pipeline data to identify 20+ operational bottlenecks, translating insights into Figma wireframes and automated HubSpot reporting.
+• Architected and deployed high-performance internal web tools using Python, SQL, and Streamlit to automate core financial workflows, resulting in a 90% reduction in manual processing time and 15,000+ hours saved annually (~$320K in revenue).
+• Optimized product performance by refactoring SQL queries and improving Python time-complexity, cutting application runtime by 53% and ensuring system scalability for 150+ providers.
+• Collaborated with stakeholders to own the end-to-end development and launch of a client-facing VA Timesheet Generator with Python; automated PDF reporting, and reduced client operational costs by ~$300/month.
 
 CommoditEdge | Dallas, TX
 Product Data Analyst | Jan 2024 - May 2024
-• Defined product requirements with stakeholders and automated ETL workflows in Python/SQL, generating dashboards that forecasted a 7% market share opportunity in the solar battery charger market.
-• Analyzed SQL datasets to inform go-to-market strategy, identifying 4 high-potential provinces for market entry and directly shaping product rollout recommendations.
 • Coordinated a 9-member cross-functional team across engineering, research, and strategy, improving project delivery timelines by 20% and ensuring stakeholder adoption of recommendations.
+• Defined product requirements with stakeholders and built ETL workflows in Python/SQL, generating dashboards that forecasted a 7% market share opportunity in the solar battery charger market.
+• Analyzed SQL datasets to inform go-to-market strategy, identifying 4 high-potential provinces for market entry and directly shaping product rollout recommendations.
 
 Hyosung Innovue Americas | Irving, TX
 Product Data Analyst Intern | Jun 2023 - Aug 2023
@@ -1181,13 +1308,11 @@ LinkedIn Learning (Digital Product Management) | Oct 2023 - Dec 2023
 • Developed a rewards system for LinkedIn Learning, boosting engagement with points tracking and certification badges
 • Conducted market research and created user personas, guiding new feature development for personalized scheduling
 
-EDUCATION
+TECHNICAL SKILLS
 
-The University of Texas at Dallas
-MS in Management Science - Product Management + Business Analytics | May 2024
+Core Engineering: Python, R, SQL, MSSQL, MySQL, Mongo DB, Tableau, Power BI, Power Query, Advanced Excel, Google Analytics (GA4), Streamlit, Amazon Web Services (AWS), Microsoft Azure, HubSpot CRM, GitHub
 
-Amity University Rajasthan, India
-Bachelor of Technology in Computer Science | Jun 2022`;
+Product and Design: Customer Journey Mapping, Product Development Lifecycle, Product Discovery, Agile Methodologies, A/B Testing, Feature Prioritization, Stakeholder Management, Figma, Jira, Linear, Trello, Confluence, Notion`;
 
             const blob = new Blob([resumeContent], { type: 'text/plain' });
             const url = window.URL.createObjectURL(blob);
@@ -1220,7 +1345,7 @@ Bachelor of Technology in Computer Science | Jun 2022`;
             }, observerOptions);
 
             // Observe all cards and sections
-            document.querySelectorAll('.metric-card, .experience-item, .skill-category, .project-card, .contact-item').forEach(el => {
+            document.querySelectorAll('.metric-card, .experience-item, .skill-category, .project-card, .contact-item, .education-card').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';
                 el.style.transition = 'all 0.6s ease';
